@@ -19,17 +19,10 @@ namespace Use_of_Lists_1
             nums.Add(3);
             nums.Add(5);
             nums.Add(3);
-            foreach(int i in nums)
-            {
-                richTextBox1.AppendText(i + ",");
-            }
-            richTextBox1.AppendText("\n===============\n");
+            printNums(nums);
             nums.Remove(3);
-            foreach (int i in nums)
-            {
-                richTextBox1.AppendText(i + ",");
-            }
-
+            printNums(nums);
+            nums.Add(47);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -40,6 +33,16 @@ namespace Use_of_Lists_1
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        void printNums(List<int> ns)
+        {
+            foreach (int i in ns)
+            {
+                richTextBox1.AppendText(i + ", ");
+                
+            }
+            richTextBox1.AppendText("\n===============\n");
         }
     }
 }
